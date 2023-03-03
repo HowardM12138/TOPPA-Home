@@ -1,6 +1,8 @@
 # TOPPA-Home
 Spring 2023 TOPPA Project: TOPPA Home
 
+### Always pull from your current branch when you work on the project!
+
 ## Installation Instruction
 1. To pull this github drive to local, use `git clone https://github.com/HowardM12138/TOPPA-Home.git` 
     1. OR `git clone git@github.com:HowardM12138/TOPPA-Home.git`
