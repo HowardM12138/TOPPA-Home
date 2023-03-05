@@ -1,10 +1,26 @@
+/* Package Import */
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 /* Component Import */
 import DashPad from "./DashPad";
+import { validateUser } from "./UserSession";
+import NavBar from "./NavBar";
 
 /* MUI Import */
-import { Grid, AppBar, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 export default function PortalHomePage() {
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (!validateUser()) {
+			console.log("user not validated");
+			navigate("/sign-in");
+			return;
+		}
+	});
+
 	const redirects = [
 		{
 			name: "TOPPA Schedule",
@@ -27,17 +43,10 @@ export default function PortalHomePage() {
 			icon: "factCheck",
 		},
 	];
+
 	return (
 		<div>
-			<AppBar sx={{ height: 50 }}>
-				<Grid
-					container
-					alignItems='center'
-					justifyContent='center'
-					sx={{ height: 1 }}>
-					<Typography variant='h6'>TOPPA Member Portal</Typography>
-				</Grid>
-			</AppBar>
+			<NavBar />
 			<Grid container sx={{ mt: 15 }}>
 				<Grid
 					container
