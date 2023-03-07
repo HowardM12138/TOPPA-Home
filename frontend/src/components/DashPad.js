@@ -1,5 +1,4 @@
 /* React Import */
-// import React, { useState, useEffect } from "react";
 
 /* MUI Import */
 import {
@@ -44,14 +43,14 @@ export default function DashPad(props) {
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-							height: 200,
-							pt: 0,
+							height: 200 - 24,
+							pt: 3,
 							pb: 0,
 						}}>
 						<Typography
 							variant='h5'
 							align='center'
-							sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
+							sx={{ display: "flex", flexGrow: 1 }}>
 							{props.name}
 						</Typography>
 						<Grid
