@@ -10,7 +10,7 @@ import SignIn from "./components/SignIn";
 
 /* Style Import */
 import "./index.css";
-import Attendance from "./components/Attendance";
+import Attendance from "./components/AttendancePage/Attendance";
 
 const router = createBrowserRouter([
   {
