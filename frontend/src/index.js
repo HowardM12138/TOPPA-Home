@@ -9,11 +9,16 @@ import PortalHomePage from "./components/PortalHomePage";
 import SignIn from "./components/SignIn";
 import Reimbursement from "./components/Reimbursement";
 import BondingGroup from "./components/BondingGroup";
+<<<<<<< HEAD
+=======
+import Attendance from "./components/AttendancePage/Attendance";
+>>>>>>> main
 
 /* Style Import */
 import "./index.css";
 
 const router = createBrowserRouter([
+<<<<<<< HEAD
     {
         path: "/",
         element: <PortalHomePage />,
@@ -31,13 +36,44 @@ const router = createBrowserRouter([
         path: "BondingGroupBoard",
         element: <BondingGroup />,
     },
+=======
+  {
+    path: "/",
+    element: <PortalHomePage />,
+    errorElement: <PortalHomePage />,
+  },
+  {
+    path: "sign-in",
+    element: <SignIn />,
+  },
+  {
+    path: "Reimbursement",
+    element: <Reimbursement />,
+  },
+  {
+    path: "BondingGroupBoard",
+    element: <BondingGroup />,
+   },
+   {
+    path: "Attendance",
+    element: <Attendance />,
+  },
+>>>>>>> main
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+<<<<<<< HEAD
     <GoogleOAuthProvider clientId="825257094322-i2kbt4aa3i3tp3a3cmfdh41uqc8b69s7.apps.googleusercontent.com">
         <React.StrictMode>
             <RouterProvider router={router} />
         </React.StrictMode>
     </GoogleOAuthProvider>
+=======
+  <GoogleOAuthProvider clientId="825257094322-i2kbt4aa3i3tp3a3cmfdh41uqc8b69s7.apps.googleusercontent.com">
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </GoogleOAuthProvider>
+>>>>>>> main
 );

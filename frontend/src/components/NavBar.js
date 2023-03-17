@@ -10,6 +10,7 @@ import Home from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
 
 export default function NavBar() {
+<<<<<<< HEAD
     const navigate = useNavigate();
     return (
         <AppBar sx={{ height: 50, bgcolor: "#2F9E41" }}>
@@ -62,3 +63,57 @@ export default function NavBar() {
         </AppBar>
     );
 }
+=======
+  const navigate = useNavigate();
+  return (
+    <AppBar sx={{ height: 50, bgcolor: "#2F9E41", position: "sticky" }}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{ height: 1 }}
+      >
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="flex-start"
+          sx={{ width: 0.95, position: "absolute" }}
+        >
+          <IconButton
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <Home />
+          </IconButton>
+        </Grid>
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="center"
+          sx={{ width: 0.95, position: "absolute" }}
+        >
+          <Typography variant="h6">TOPPA Member Portal</Typography>
+        </Grid>
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="flex-end"
+          sx={{ width: 0.95, position: "absolute" }}
+        >
+          <Button
+            variant="contained"
+            onClick={() => {
+              clearUser();
+              navigate("/sign-in");
+            }}
+            sx={{ bgcolor: "#2F9E41" }}
+          >
+            Log Out
+          </Button>
+        </Grid>
+      </Grid>
+    </AppBar>
+  );
+}
+>>>>>>> main
