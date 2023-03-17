@@ -9,6 +9,7 @@ import PortalHomePage from "./components/PortalHomePage";
 import SignIn from "./components/SignIn";
 import Reimbursement from "./components/Reimbursement";
 import BondingGroup from "./components/BondingGroup";
+import Attendance from "./components/AttendancePage/Attendance";
 
 /* Style Import */
 import "./index.css";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "BondingGroupBoard",
     element: <BondingGroup />,
+   },
+   {
+    path: "Attendance",
+    element: <Attendance />,
   },
 ]);
 

@@ -12,7 +12,7 @@ import IconButton from "@mui/material/IconButton";
 export default function NavBar() {
   const navigate = useNavigate();
   return (
-    <AppBar sx={{ height: 50, bgcolor: "#2F9E41" }}>
+    <AppBar sx={{ height: 50, bgcolor: "#2F9E41", position: "sticky" }}>
       <Grid
         container
         justifyContent="center"

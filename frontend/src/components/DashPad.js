@@ -14,12 +14,12 @@ import PaymentsIcon from "@mui/icons-material/Payments";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import CelebrationIcon from "@mui/icons-material/Celebration";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
+import { useNavigate } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
 export default function DashPad(props) {
   const navigate = useNavigate();
-
   const selectIcon = (name) => {
     switch (name) {
       case "schedule":
