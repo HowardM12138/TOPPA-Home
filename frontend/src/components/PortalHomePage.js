@@ -19,7 +19,7 @@ export default function PortalHomePage() {
 			navigate("/sign-in");
 			return;
 		}
-	});
+	}, []);
 
 	const redirects = [
 		{
