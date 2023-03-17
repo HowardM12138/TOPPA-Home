@@ -41,7 +41,6 @@ export default function PortalHomePage() {
     {
       name: "Attendance",
       icon: "factCheck",
-      url: "attendance",
     },
   ];
 

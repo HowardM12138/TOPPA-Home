@@ -6,17 +6,33 @@ import { clearUser } from "./UserSession";
 
 /* MUI Import */
 import { Grid, AppBar, Typography, Button } from "@mui/material";
+import Home from "@mui/icons-material/Home";
+import IconButton from "@mui/material/IconButton";
 
 export default function NavBar() {
   const navigate = useNavigate();
   return (
-    <AppBar sx={{ height: 50, bgcolor: "#1F9F4B", position: "sticky" }}>
+    <AppBar sx={{ height: 50, bgcolor: "#2F9E41", position: "sticky" }}>
       <Grid
         container
         justifyContent="center"
         alignItems="center"
         sx={{ height: 1 }}
       >
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="flex-start"
+          sx={{ width: 0.95, position: "absolute" }}
+        >
+          <IconButton
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <Home />
+          </IconButton>
+        </Grid>
         <Grid
           container
           alignItems="center"
@@ -37,7 +53,7 @@ export default function NavBar() {
               clearUser();
               navigate("/sign-in");
             }}
-            sx={{ bgcolor: "#1F9F4B" }}
+            sx={{ bgcolor: "#2F9E41" }}
           >
             Log Out
           </Button>

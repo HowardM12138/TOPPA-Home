@@ -16,7 +16,10 @@ import CelebrationIcon from "@mui/icons-material/Celebration";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import { useNavigate } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+
 export default function DashPad(props) {
+  const navigate = useNavigate();
   const selectIcon = (name) => {
     switch (name) {
       case "schedule":
@@ -33,7 +36,6 @@ export default function DashPad(props) {
         return <ErrorIcon sx={{ fontSize: 80 }}></ErrorIcon>;
     }
   };
-  const navigate = useNavigate();
   return (
     <div>
       <Card variant="outlined" sx={{ width: 200, height: 200 }}>
@@ -61,7 +63,6 @@ export default function DashPad(props) {
             >
               {props.name}
             </Typography>
-
             <Grid
               container
               justifyContent="center"

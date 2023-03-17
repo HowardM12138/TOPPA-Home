@@ -7,6 +7,8 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 /* Component Import */
 import PortalHomePage from "./components/PortalHomePage";
 import SignIn from "./components/SignIn";
+import Reimbursement from "./components/Reimbursement";
+import BondingGroup from "./components/BondingGroup";
 import Attendance from "./components/AttendancePage/Attendance";
 
 /* Style Import */
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
     element: <SignIn />,
   },
   {
+    path: "Reimbursement",
+    element: <Reimbursement />,
+  },
+  {
+    path: "BondingGroupBoard",
+    element: <BondingGroup />,
+   },
+   {
     path: "Attendance",
     element: <Attendance />,
   },
