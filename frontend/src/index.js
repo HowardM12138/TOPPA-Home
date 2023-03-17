@@ -7,10 +7,10 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 /* Component Import */
 import PortalHomePage from "./components/PortalHomePage";
 import SignIn from "./components/SignIn";
+import Attendance from "./components/AttendancePage/Attendance";
 
 /* Style Import */
 import "./index.css";
-import Attendance from "./components/AttendancePage/Attendance";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <SignIn />,
   },
   {
-    path: "attendance",
+    path: "Attendance",
     element: <Attendance />,
   },
 ]);

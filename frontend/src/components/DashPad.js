@@ -7,7 +7,6 @@ import {
   CardContent,
   Typography,
   Grid,
-  Button,
 } from "@mui/material";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import ErrorIcon from "@mui/icons-material/Error";
@@ -38,7 +37,11 @@ export default function DashPad(props) {
   return (
     <div>
       <Card variant="outlined" sx={{ width: 200, height: 200 }}>
-        <CardActionArea>
+        <CardActionArea
+          onClick={() => {
+            navigate(props.name.replace(/\s+/g, ""));
+          }}
+        >
           <CardContent
             component="div"
             sx={{
@@ -58,8 +61,6 @@ export default function DashPad(props) {
             >
               {props.name}
             </Typography>
-
-            <Button onClick={() => navigate("attendance")}>Go</Button>
 
             <Grid
               container
