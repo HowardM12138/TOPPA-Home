@@ -42,6 +42,8 @@ export default function SignIn() {
 						flexDirection: "column",
 						alignItems: "center",
 						justifyContent: "center",
+						borderRadius: 5,
+						border: 1,
 					}}>
 					<CardContent
 						component='div'
