@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import AttendBlock from "./AttendBlock";
 import NavBar from "../NavBar";
+import BondingBlock from "./BondingBlock";
 
 export default function Attendance() {
   const attendanceprops = [
@@ -18,6 +19,8 @@ export default function Attendance() {
       PastDate: "2.28",
       Status: "Presented",
     },
+  ];
+  const bondingprops = [
     {
       title: "Biweekly Bonding Attendance",
       TodayEvent: "2.1 Bonding",
@@ -26,6 +29,7 @@ export default function Attendance() {
       Status: "Presented",
     },
   ];
+
   const GridContainer = {
     display: "flex",
     alignItems: "center",
@@ -46,6 +50,20 @@ export default function Attendance() {
                 AttendanceRate={attprops.AttendanceRate}
                 PastDate={attprops.PastDate}
                 Status={attprops.Status}
+              />
+            </Grid>
+          );
+        })}
+
+        {bondingprops.map((bdprops) => {
+          return (
+            <Grid item xs={3.5}>
+              <BondingBlock
+                title={bdprops.title}
+                TodayEvent={bdprops.TodayEvent}
+                AttendanceRate={bdprops.AttendanceRate}
+                PastDate={bdprops.PastDate}
+                Status={bdprops.Status}
               />
             </Grid>
           );
