@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 /* Component Import */
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 
 /* MUI Import */
 import { Card, CardContent, Typography, Grid, Box } from "@mui/material";

@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 /* Component Import */
 import DashPad from "./DashPad";
-import { validateUser } from "./UserSession";
-import NavBar from "./NavBar";
+import { validateUser } from "../UserSession";
+import NavBar from "../NavBar";
 
 /* MUI Import */
 import { Grid } from "@mui/material";

@@ -1,8 +1,36 @@
 import { Typography, Button, Grid, OutlinedInput } from "@mui/material";
 import StatusBox from "./StatusBox";
+import { useRef, useState } from "react";
 
 export default function AttendBlock(props) {
+  const InputRef = useRef(null);
   const NumOfBox = [1, 2, 3, 4];
+  const [input, setInput] = useState(null);
+  const onChange = (event) => {
+    const newInput = event.target.value;
+    setInput(newInput);
+  };
+  //用<Input>的onChange property加useState把输入值event.target.value赋值给state，输入值默认是一个string
+
+  const Click = () => {
+    console.log(input);
+    //几个错误：一定是fetch给后端的网址，port不一样。一定是http不是http's'，不然会出现SSL_PROTOCAL_ERROR
+    fetch("http://localhost:5002/Attendance/AddSecretWord", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      //Header很重要，不然后端req.body会undefined显示为{}
+      method: "POST",
+      body: JSON.stringify({
+        secretword: input,
+      }),
+      //javascript object变成JSON，就是把javascript object变成一个text上多了引号，JSON是req规定的传输数据的格式
+    }).then((result) => {
+      console.log(result);
+      InputRef.current.value = "";
+    });
+  };
 
   const FirstTitleBlock = {
     mb: 2,
@@ -63,14 +91,21 @@ export default function AttendBlock(props) {
       <Grid container item xs={12} sx={SecondGridContainer}>
         <Grid item xs={12} sx={Wrapper}>
           <Typography variant="h6" sx={EventTitle}>
-            {props.TodayEvent}
+            {props.PastDate} {props.TodayEvent}
           </Typography>
         </Grid>
+
         <Grid item xs={8} sx={Wrapper}>
-          <OutlinedInput placeholder="Attendance Word" sx={Input} />
+          <OutlinedInput
+            placeholder="Attendance Word"
+            sx={Input}
+            name="secretword"
+            onChange={onChange}
+            inputRef={InputRef}
+          />
         </Grid>
         <Grid item xs={4} sx={Wrapper}>
-          <Button variant="contained" sx={Submit}>
+          <Button variant="contained" sx={Submit} onClick={Click}>
             Submit
           </Button>
         </Grid>

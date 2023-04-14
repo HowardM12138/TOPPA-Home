@@ -5,12 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 /* Component Import */
-import PortalHomePage from "./components/PortalHomePage";
+import PortalHomePage from "./components/Mainpage/PortalHomePage";
 import SignIn from "./components/SignIn";
-import Reimbursement from "./components/Reimbursement";
-import BondingGroup from "./components/BondingGroup";
+import Reimbursement from "./components/Reimbursement/Reimbursement";
+import BondingGroup from "./components/Bonding/BondingGroup";
 import Attendance from "./components/AttendancePage/Attendance";
 import KudoBoard from "./components/KudoBoard/KudoBoard";
+import KudoSubmit from "./components/KudoBoard/KudoSubmit";
 
 /* Style Import */
 import "./index.css";
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "KudoBoard",
     element: <KudoBoard />,
+  },
+  {
+    path: "KudoBoard/KudoSubmit",
+    element: <KudoSubmit />,
   },
 ]);
 
