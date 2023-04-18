@@ -17,6 +17,16 @@ import coco_pic from "../photos/coco.png";
 import persy_pic from "../photos/persy.png";
 import hidy_pic from "../photos/hidy.png";
 
+const CardStyle = {
+  my: 1,
+  width: "100%",
+};
+const Wrapper = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
 export default function KudoBoard(props) {
   const navigate = useNavigate();
   const name_pic = {
@@ -32,7 +42,7 @@ export default function KudoBoard(props) {
 
   const DeleteClick = () => {
     console.log(props.id);
-    fetch("http://localhost:5002/KudoBoard/delete/", {
+    fetch("http://localhost:5002/KudoBoard/delete", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -42,31 +52,31 @@ export default function KudoBoard(props) {
       }),
     })
       .then((result) => {
-        window.location.reload(); //刷新当前页面的代码
+        console.log("deleted!");
+        //window.location.reload(); //刷新当前页面的代码
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  const CardStyle = {
-    my: 1,
-    width: "100%",
-  };
-  const [heart, setheart] = useState(
-    JSON.parse(window.localStorage.getItem(`${props.id}_heartcount`)) || 0
-  );
   const thumbup = () => {
-    setheart(heart + 1);
-    window.localStorage.setItem(
-      `${props.id}_heartcount`,
-      JSON.stringify(heart + 1)
-    );
-  };
-  const Wrapper = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    fetch("http://localhost:5002/KudoBoard/like", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PUT",
+      body: JSON.stringify({
+        id: props.id,
+      }),
+    })
+      .then((result) => {
+        //window.location.reload();
+        console.log("updated!");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -93,7 +103,7 @@ export default function KudoBoard(props) {
           </Grid>
           <Grid xs={2}>
             <Typography variant="body1" sx={{ ml: 0.5, fontWeight: "bold" }}>
-              {heart}
+              {props.thumbup}
             </Typography>
           </Grid>
           <Grid xs={8}>

@@ -3,6 +3,13 @@ import Block from "./Block";
 import NavBar from "../NavBar";
 import { useEffect, useState } from "react";
 
+const GridContainer = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  mt: 2,
+};
+
 export default function Attendance() {
   const [Props, setProps] = useState([]);
 
@@ -15,16 +22,13 @@ export default function Attendance() {
       .catch((err) => {
         console.log(err);
       });
-
-    console.log(Props);
   }, []);
 
-  const GridContainer = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    mt: 2,
-  };
+  /*useEffect(() => {
+    setTimeout(() => {
+      refresh();
+    }, 1000000000);
+  }, [Props]);*/
 
   return (
     <div>

@@ -4,11 +4,18 @@ import KudoCard from "./KudoCard";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const GridContainerStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  m: 1,
+};
+
 export default function KudoBoard() {
   const navigate = useNavigate();
   const [Params, setParams] = useState([]);
 
-  useEffect(() => {
+  const refresh = () => {
     fetch("http://localhost:5002/KudoBoard/refresh")
       .then(
         (response) => response.json() //then function这么写会直接默认return后面的值
@@ -21,14 +28,15 @@ export default function KudoBoard() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
-
-  const GridContainerStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    m: 1,
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      refresh();
+    }, 500);
+  }, [Params]); //每0.5秒从后端fetch一遍数据，不知道会不会伤害server？
+  //每次fetch完Params这个State就会被改变
+  //更高级的替代品叫socket？
 
   //去找param是个啥是一个async指令，需要时间，所以最后要等Params有了之后才能去map循环，{Params && Params.map}
   return (
@@ -57,6 +65,7 @@ export default function KudoBoard() {
                   name={param.name}
                   content={param.kudocontent}
                   id={param._id}
+                  thumbup={param.thumbup}
                 />
               </Grid>
             );

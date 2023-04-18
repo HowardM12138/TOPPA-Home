@@ -19,7 +19,11 @@ router.post("/KudoBoard/KudoSubmit/upload", (req, res) => {
   //req.body这里会因为前面的middleware自动从JSON变为Javascript object，不用再parse，直接用key来提取就行
   const person = req.body.person;
   const content = req.body.kudocontent;
-  const NewKudoSubmit = new KudoSubmit({ name: person, kudocontent: content });
+  const NewKudoSubmit = new KudoSubmit({
+    name: person,
+    kudocontent: content,
+    thumbup: 0,
+  });
   //Model的argument是一个Javascript object
 
   NewKudoSubmit.save()
@@ -36,6 +40,20 @@ router.delete("/KudoBoard/delete", (req, res) => {
   KudoSubmit.deleteOne({ _id: ID }) //Model真是万能的，一个Model就代表那个collection
     .then((result) => {
       res.send("deleted!"); //一定要写个res.send，不然前端认为还没有fetch到不会去then function
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+router.put("/KudoBoard/like", (req, res) => {
+  //postman的require body一定要用x-www-form-urlencoded
+  const ID = req.body.id;
+  KudoSubmit.updateOne({ _id: ID }, { $inc: { thumbup: 1 } }) //thumbup = thumbup + 1
+    //$inc增加，$set替代，$mul相乘，$max$min取最大最小值
+    //把计算都放在后端做！
+    .then((result) => {
+      res.send(result);
     })
     .catch((err) => {
       console.log(err);

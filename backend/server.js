@@ -1,3 +1,5 @@
+//If you want to run nodemon locally instead of globally, you can run npxnodemon
+
 const express = require("express");
 const cors = require("cors");
 const mongooes = require("mongoose");
