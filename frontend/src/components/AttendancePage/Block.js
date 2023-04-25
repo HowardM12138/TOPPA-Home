@@ -61,7 +61,7 @@ export default function AttendBlock(props) {
   };
   //用<Input>的onChange property加useState把输入值event.target.value赋值给state，输入值默认是一个string
 
-  useEffect(() => {
+  const Blockrefresh = () => {
     fetch("http://localhost:5002/Attendance/Blockrefresh", {
       //Header很重要，不然后端req.body会undefined显示为{}
       headers: {
@@ -81,7 +81,13 @@ export default function AttendBlock(props) {
       .catch((err) => {
         console.log(err);
       });
-  });
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      Blockrefresh();
+    }, 500);
+  }, [Params]);
 
   const Click = () => {
     //几个错误：一定是fetch给后端的网址，port不一样。一定是http不是http's'，不然会出现SSL_PROTOCAL_ERROR
@@ -101,7 +107,7 @@ export default function AttendBlock(props) {
       //javascript object变成JSON，就是把javascript object变成一个text上多了引号，JSON是req规定的传输数据的格式
     }).then((result) => {
       console.log(result);
-      InputRef.current.value = "";
+      window.location.reload();
     });
   };
 

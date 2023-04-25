@@ -34,9 +34,8 @@ export default function KudoBoard() {
     setTimeout(() => {
       refresh();
     }, 500);
-  }, [Params]); //每0.5秒从后端fetch一遍数据，不知道会不会伤害server？
-  //每次fetch完Params这个State就会被改变
-  //更高级的替代品叫socket？
+  }, [Params]); //隔0.5秒从后端fetch一遍数据，不知道会不会伤害server？
+  //每次fetch完Params这个State就会被改变，useeffect就再会被call
 
   //去找param是个啥是一个async指令，需要时间，所以最后要等Params有了之后才能去map循环，{Params && Params.map}
   return (

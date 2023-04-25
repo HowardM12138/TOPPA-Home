@@ -13,7 +13,7 @@ const GridContainer = {
 export default function Attendance() {
   const [Props, setProps] = useState([]);
 
-  useEffect(() => {
+  const refresh = () => {
     fetch("http://localhost:5002/Attendance/refresh")
       .then((response) => response.json())
       .then((response) => {
@@ -22,13 +22,13 @@ export default function Attendance() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  };
 
-  /*useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       refresh();
-    }, 1000000000);
-  }, [Props]);*/
+    }, 500);
+  }, [Props]);
 
   return (
     <div>

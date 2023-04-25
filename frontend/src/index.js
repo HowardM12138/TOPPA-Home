@@ -12,6 +12,8 @@ import BondingGroup from "./components/Bonding/BondingGroup";
 import Attendance from "./components/AttendancePage/Attendance";
 import KudoBoard from "./components/KudoBoard/KudoBoard";
 import KudoSubmit from "./components/KudoBoard/KudoSubmit";
+import Calendar from "./components/CalendarPage/Calendar";
+import SignInFailure from "./components/SignInFailure";
 
 /* Style Import */
 import "./index.css";
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
   {
     path: "KudoBoard/KudoSubmit",
     element: <KudoSubmit />,
+  },
+  {
+    path: "TOPPASchedule",
+    element: <Calendar />,
+  },
+  {
+    path: "sign-in-failure",
+    element: <SignInFailure />,
   },
 ]);
 

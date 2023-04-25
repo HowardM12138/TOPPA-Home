@@ -5,6 +5,8 @@ const cors = require("cors");
 const mongooes = require("mongoose");
 const AttendanceRoutes = require("./routes/AttendanceRoutes");
 const KudoBoardRoutes = require("./routes/KudoBoardRoutes");
+const SignInRoutes = require("./routes/SignInRoutes");
+const CalendarRoutes = require("./routes/CalendarRoutes");
 
 require("dotenv").config();
 
@@ -26,6 +28,8 @@ connection.once("open", () => {
 
 app.use(AttendanceRoutes);
 app.use(KudoBoardRoutes);
+app.use(SignInRoutes);
+app.use(CalendarRoutes);
 
 app.listen(port);
 
