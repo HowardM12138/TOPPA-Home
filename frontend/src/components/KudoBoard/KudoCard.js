@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import Howard from "../photos/howard.png";
+import Howard from "../photos/howardmeng.png";
 import { Grid, Input } from "@mui/material";
 
 export default function KudoBoard(props) {
