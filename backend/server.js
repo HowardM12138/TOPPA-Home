@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 //自动parse的middleware
 
 const uri =
-  "mongodb+srv://yjf:yjf20040705@cluster0.fmutcua.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://admin:toppahome123@toppa-home.yreawp5.mongodb.net/?retryWrites=true&w=majority";
 mongooes.connect(uri);
 const connection = mongooes.connection;
 connection.once("open", () => {
