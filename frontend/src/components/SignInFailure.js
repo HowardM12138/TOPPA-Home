@@ -29,7 +29,6 @@ export default function SignInFailure() {
 
   return (
     <div>
-      <NavBar />
       <Grid container>
         <Grid item xs={12} sx={Wrapper}>
           <Typography variant="h4" sx={title}>

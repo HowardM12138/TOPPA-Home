@@ -7,6 +7,7 @@ const AttendanceRoutes = require("./routes/AttendanceRoutes");
 const KudoBoardRoutes = require("./routes/KudoBoardRoutes");
 const SignInRoutes = require("./routes/SignInRoutes");
 const CalendarRoutes = require("./routes/CalendarRoutes");
+const PortalHomeRoutes = require("./routes/PortalHomeRoutes");
 
 require("dotenv").config();
 
@@ -30,6 +31,7 @@ app.use(AttendanceRoutes);
 app.use(KudoBoardRoutes);
 app.use(SignInRoutes);
 app.use(CalendarRoutes);
+app.use(PortalHomeRoutes);
 
 app.listen(port);
 
