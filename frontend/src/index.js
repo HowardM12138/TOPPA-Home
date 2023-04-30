@@ -18,21 +18,6 @@ import Info from "./components/Info";
 /* Style Import */
 import "./index.css";
 
-let result;
-function getData() {
-  return fetch("http://localhost:4000/all-info")
-    .then((response) => response.json())
-    .then((data) => {
-      result = data;
-      return result;
-    });
-}
-getData().then((data) => {
-  result = data;
-  // console.log(result);
-});
-// console.log(result);
-
 const router = createBrowserRouter([
   {
     path: "/",
