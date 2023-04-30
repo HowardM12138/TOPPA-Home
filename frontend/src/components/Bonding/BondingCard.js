@@ -67,7 +67,7 @@ export default function BondingCard(props) {
                         <Grid item>
                           <EnlargeAvatar
                             alt={input.name}
-                            src={require(`${input.pic}`)}
+                            // src={require(input.pic)}
                             sx={{
                               width: 128,
                               height: 128,
@@ -123,7 +123,7 @@ export default function BondingCard(props) {
                       <Grid item>
                         <EnlargeAvatar
                           alt={input.name}
-                          src={require(`${input.pic}`)}
+                          // src={require(input.pic)}
                           sx={{
                             width: 100,
                             height: 100,

@@ -11,10 +11,9 @@ import {
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import ErrorIcon from "@mui/icons-material/Error";
 import PaymentsIcon from "@mui/icons-material/Payments";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import CelebrationIcon from "@mui/icons-material/Celebration";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
-import PeopleIcon from "@mui/icons-material/People";
 import { useNavigate } from "react-router-dom";
 
 export default function DashPad(props) {
@@ -25,14 +24,12 @@ export default function DashPad(props) {
         return <ScheduleIcon sx={{ fontSize: 80 }}></ScheduleIcon>;
       case "payments":
         return <PaymentsIcon sx={{ fontSize: 80 }}></PaymentsIcon>;
-      case "restaurant":
-        return <RestaurantIcon sx={{ fontSize: 80 }}></RestaurantIcon>;
+      case "peopleAlt":
+        return <PeopleAltIcon sx={{ fontSize: 80 }}></PeopleAltIcon>;
       case "celebration":
         return <CelebrationIcon sx={{ fontSize: 80 }}></CelebrationIcon>;
       case "factCheck":
         return <FactCheckIcon sx={{ fontSize: 80 }}></FactCheckIcon>;
-      case "people":
-        return <PeopleIcon sx={{ fontSize: 80 }}></PeopleIcon>;
       default:
         return <ErrorIcon sx={{ fontSize: 80 }}></ErrorIcon>;
     }
@@ -60,7 +57,7 @@ export default function DashPad(props) {
             <Typography
               variant="h5"
               align="center"
-              sx={{ display: "flex", flexGrow: 1 }}
+              sx={{ display: "flex", flexGrow: 1, fontWeight: "bold" }}
             >
               {props.name}
             </Typography>

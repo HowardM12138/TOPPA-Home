@@ -1,5 +1,5 @@
 /* Package Import */
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 /* Component Import */
 import { clearUser } from "./UserSession";
@@ -8,6 +8,7 @@ import { clearUser } from "./UserSession";
 import { Grid, AppBar, Typography, Button } from "@mui/material";
 import Home from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
+import { Box } from "@mui/system";
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -19,7 +20,9 @@ export default function NavBar() {
           item
           justifyContent="space-between"
           alignItems="center"
-          sx={{ height: 1, width: 0.97 }}
+          justifyContent="flex-start"
+          xs={1}
+          sx={{ width: 0.95 }}
         >
           <IconButton
             onClick={() => {
@@ -28,14 +31,132 @@ export default function NavBar() {
           >
             <Home />
           </IconButton>
-          <Typography
-            variant="h6"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="center"
+          xs={2}
+          sx={{ width: 0.95, mr: 2 }}
+        >
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             TOPPA Member Portal
           </Typography>
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="right"
+          xs={1.5}
+          sx={{ width: 0.95 }}
+        >
+          <Button
+            onClick={() => {
+              navigate("/ToppaSchedule");
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{ color: "black", fontWeight: "bold" }}
+            >
+              Toppa Schedule
+            </Typography>
+          </Button>
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="right"
+          xs={1.5}
+          sx={{ width: 0.95 }}
+        >
+          <Button
+            onClick={() => {
+              navigate("/Reimbursement");
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{ color: "black", fontWeight: "bold" }}
+            >
+              Reimbursement
+            </Typography>
+          </Button>
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="right"
+          xs={1.5}
+          sx={{ width: 0.95 }}
+        >
+          <Button
+            onClick={() => {
+              navigate("/BondingGroupBoard");
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{ color: "black", fontWeight: "bold" }}
+            >
+              Bonding Group
+            </Typography>
+          </Button>
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="right"
+          xs={1.2}
+          sx={{ width: 0.95 }}
+        >
+          <Button
+            onClick={() => {
+              navigate("/KudoBoard");
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{ color: "black", fontWeight: "bold" }}
+            >
+              KudoBoard
+            </Typography>
+          </Button>
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="right"
+          xs={1.2}
+          sx={{ width: 0.95 }}
+        >
+          <Button
+            onClick={() => {
+              navigate("/Attendance");
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{ color: "black", fontWeight: "bold" }}
+            >
+              Attendance
+            </Typography>
+          </Button>
+        </Grid>
+
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="flex-end"
+          xs={1.5}
+          sx={{ width: 0.95 }}
+        >
           <Button
             variant="contained"
             onClick={() => {
@@ -44,7 +165,9 @@ export default function NavBar() {
             }}
             sx={{ bgcolor: "#058743" }}
           >
-            Log Out
+            <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+              Log Out
+            </Typography>
           </Button>
         </Grid>
       </Grid>

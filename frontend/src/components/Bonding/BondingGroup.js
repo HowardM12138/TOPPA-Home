@@ -1,9 +1,10 @@
 /* Component Import */
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 import BondingCard from "./BondingCard.js";
 
 /* MUI Import */
 import { Grid, Box } from "@mui/material";
+import cocoimage from "../photos/cocoma.png";
 
 export default function BondingGroup() {
   const groups = [
@@ -12,27 +13,27 @@ export default function BondingGroup() {
         {
           isLeader: true,
           name: "Coco Ma",
-          pic: "./photos/coco.png",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
           name: "Hidy Chan",
-          pic: "./photos/hidy.png",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -41,27 +42,27 @@ export default function BondingGroup() {
         {
           isLeader: true,
           name: "Howard Meng",
-          pic: "./photos/howard.png",
+          pic: "../photos/howardmeng.png",
         },
         {
           isLeader: false,
           name: "Jenny Wang",
-          pic: "./photos/jenny.png",
+          pic: "../photos/jennywang.png",
         },
         {
           isLeader: false,
           name: "Jingfeng Yang",
-          pic: "./photos/jingfeng.png",
+          pic: "../photos/jingfengyang.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -70,27 +71,27 @@ export default function BondingGroup() {
         {
           isLeader: true,
           name: "Howard Meng",
-          pic: "./photos/howard.png",
+          pic: "../photos/howardmeng.png",
         },
         {
           isLeader: false,
           name: "Jenny Wang",
-          pic: "./photos/jenny.png",
+          pic: "../photos/jennywang.png",
         },
         {
           isLeader: false,
           name: "Jingfeng Yang",
-          pic: "./photos/jingfeng.png",
+          pic: "../photos/jingfengyang.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -99,27 +100,27 @@ export default function BondingGroup() {
         {
           isLeader: true,
           name: "Coco Ma",
-          pic: "./photos/coco.png",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
           name: "Hidy Chan",
-          pic: "./photos/hidy.png",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -128,27 +129,27 @@ export default function BondingGroup() {
         {
           isLeader: true,
           name: "Coco Ma",
-          pic: "./photos/coco.png",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
           name: "Hidy Chan",
-          pic: "./photos/hidy.png",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -157,27 +158,27 @@ export default function BondingGroup() {
         {
           isLeader: true,
           name: "Coco Ma",
-          pic: "./photos/coco.png",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
           name: "Hidy Chan",
-          pic: "./photos/hidy.png",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Persy Zhu",
-          pic: "./photos/persy.png",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
           name: "Wilson He",
-          pic: "./photos/wilson.png",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
