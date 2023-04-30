@@ -14,14 +14,11 @@ export default function NavBar() {
   const navigate = useNavigate();
   return (
     <AppBar sx={{ height: 50, bgcolor: "#2F9E41", position: "sticky" }}>
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        sx={{ height: 1 }}
-      >
+      <Grid container justifyContent="center" sx={{ height: 1, width: 1 }}>
         <Grid
           container
+          item
+          justifyContent="space-between"
           alignItems="center"
           justifyContent="flex-start"
           xs={1}
@@ -166,7 +163,7 @@ export default function NavBar() {
               clearUser();
               navigate("/sign-in");
             }}
-            sx={{ bgcolor: "#2F9E41" }}
+            sx={{ bgcolor: "#058743" }}
           >
             <Typography variant="body2" sx={{ fontWeight: "bold" }}>
               Log Out

@@ -4,6 +4,7 @@ import BondingCard from "./BondingCard.js";
 
 /* MUI Import */
 import { Grid, Box } from "@mui/material";
+import cocoimage from "../photos/cocoma.png";
 
 export default function BondingGroup() {
   const groups = [
@@ -11,33 +12,28 @@ export default function BondingGroup() {
       bondingGroup: [
         {
           isLeader: true,
-          name: "Coco",
-          pic: "../photos/coco.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Coco Ma",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
-          name: "Hidy",
-          pic: "../photos/hidy.png",
-          vx: "../photos/hidyvx.jpeg",
+          name: "Hidy Chan",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -45,33 +41,28 @@ export default function BondingGroup() {
       bondingGroup: [
         {
           isLeader: true,
-          name: "Howard",
-          pic: "../photos/howard.png",
-          vx: "../photos/howardvx.png",
+          name: "Howard Meng",
+          pic: "../photos/howardmeng.png",
         },
         {
           isLeader: false,
-          name: "Jenny",
-          pic: "../photos/jenny.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Jenny Wang",
+          pic: "../photos/jennywang.png",
         },
         {
           isLeader: false,
-          name: "Jingfeng",
-          pic: "../photos/jingfeng.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Jingfeng Yang",
+          pic: "../photos/jingfengyang.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -79,32 +70,28 @@ export default function BondingGroup() {
       bondingGroup: [
         {
           isLeader: true,
-          name: "Howard",
-          pic: "../photos/howard.png",
-          vx: "../photos/howardvx.png",
+          name: "Howard Meng",
+          pic: "../photos/howardmeng.png",
         },
         {
           isLeader: false,
-          name: "Jenny",
-          pic: "../photos/jenny.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Jenny Wang",
+          pic: "../photos/jennywang.png",
         },
         {
           isLeader: false,
-          name: "Jingfeng",
-          pic: "../photos/jingfeng.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Jingfeng Yang",
+          pic: "../photos/jingfengyang.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -112,33 +99,28 @@ export default function BondingGroup() {
       bondingGroup: [
         {
           isLeader: true,
-          name: "Coco",
-          pic: "../photos/coco.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Coco Ma",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
-          name: "Hidy",
-          pic: "../photos/hidy.png",
-          vx: "../photos/hidyvx.jpeg",
+          name: "Hidy Chan",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -146,33 +128,28 @@ export default function BondingGroup() {
       bondingGroup: [
         {
           isLeader: true,
-          name: "Coco",
-          pic: "../photos/coco.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Coco Ma",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
-          name: "Hidy",
-          pic: "../photos/hidy.png",
-          vx: "../photos/hidyvx.jpeg",
+          name: "Hidy Chan",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -180,33 +157,28 @@ export default function BondingGroup() {
       bondingGroup: [
         {
           isLeader: true,
-          name: "Coco",
-          pic: "../photos/coco.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Coco Ma",
+          pic: "../photos/cocoma.png",
         },
         {
           isLeader: false,
-          name: "Hidy",
-          pic: "../photos/hidy.png",
-          vx: "../photos/hidyvx.jpeg",
+          name: "Hidy Chan",
+          pic: "../photos/hidychan.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Persy",
-          pic: "../photos/persy.png",
-          vx: "../photos/persyvx.jpeg",
+          name: "Persy Zhu",
+          pic: "../photos/persyzhu.png",
         },
         {
           isLeader: false,
-          name: "Wilson",
-          pic: "../photos/wilson.png",
-          vx: "../photos/cocovx.JPG",
+          name: "Wilson He",
+          pic: "../photos/wilsonhe.png",
         },
       ],
     },
@@ -221,7 +193,7 @@ export default function BondingGroup() {
           flexDirection: "row",
         }}
       >
-        <Grid container sx={{ mt: 5, mr: 4, ml: 2.5 }}>
+        <Grid container sx={{ mt: 3, mr: 4, ml: 2.5, mb: 2 }}>
           <Grid
             container
             direction="row"

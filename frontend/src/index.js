@@ -11,6 +11,9 @@ import Reimbursement from "./components/Reimbursement/Reimbursement";
 import BondingGroup from "./components/Bonding/BondingGroup";
 import Attendance from "./components/AttendancePage/Attendance";
 import KudoBoard from "./components/KudoBoard/KudoBoard";
+import Members from "./components/Members";
+import Profile from "./components/Profile";
+import Info from "./components/Info";
 import KudoSubmit from "./components/KudoBoard/KudoSubmit";
 import Calendar from "./components/CalendarPage/Calendar";
 import SignInFailure from "./components/SignInFailure";
@@ -55,6 +58,18 @@ const router = createBrowserRouter([
   {
     path: "sign-in-failure",
     element: <SignInFailure />,
+  },
+  {
+    path: "Members",
+    element: <Members />,
+  },
+  {
+    path: "submitinfo",
+    element: <Info />,
+  },
+  {
+    path: "Members/:memberName",
+    element: <Profile />,
   },
 ]);
 

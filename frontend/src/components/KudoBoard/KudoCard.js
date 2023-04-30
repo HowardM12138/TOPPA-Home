@@ -9,13 +9,13 @@ import ShareIcon from "@mui/icons-material/Share";
 import { Grid, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import howard_pic from "../photos/howard.png";
-import wilson_pic from "../photos/wilson.png";
-import jenny_pic from "../photos/jenny.png";
-import jingfeng_pic from "../photos/jingfeng.png";
-import coco_pic from "../photos/coco.png";
-import persy_pic from "../photos/persy.png";
-import hidy_pic from "../photos/hidy.png";
+import howard_pic from "../photos/howardmeng.png";
+import wilson_pic from "../photos/wilsonhe.png";
+import jenny_pic from "../photos/jennywang.png";
+import jingfeng_pic from "../photos/jingfengyang.png";
+import coco_pic from "../photos/cocoma.png";
+import persy_pic from "../photos/persyzhu.png";
+import hidy_pic from "../photos/hidychan.png";
 
 const CardStyle = {
   my: 1,
