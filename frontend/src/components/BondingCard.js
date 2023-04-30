@@ -1,6 +1,18 @@
-import { Typography, Grid, Avatar, Box } from "@mui/material";
+/* Package Import */
+import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+
+/* MUI Import */
+import { Typography, Grid, Avatar, Box, styled } from "@mui/material";
 
 export default function BondingCard(props) {
+  const navigate = useNavigate();
+  const EnlargeAvatar = styled(Avatar)(({ theme }) => ({
+    transition: "transform 0.2s",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
+  }));
   return (
     <div>
       <Box
@@ -12,6 +24,7 @@ export default function BondingCard(props) {
           width: 450,
           height: 600,
           borderRadius: 8,
+          boxShadow: "0px 3px 6px #00000029",
         }}
       >
         <Grid
@@ -52,17 +65,21 @@ export default function BondingCard(props) {
                         alignItems="center"
                       >
                         <Grid item>
-                          <Avatar
+                          <EnlargeAvatar
                             alt={input.name}
                             src={require(`${input.pic}`)}
                             sx={{
                               width: 128,
                               height: 128,
+                              boxShadow: "0px 3px 6px #00000029",
                             }}
                             onClick={() => {
-                              window.open(require(`${input.vx}`), "_self");
+                              navigate(
+                                "/Members/" +
+                                  input.name.toLowerCase().replace(/\s+/g, "")
+                              );
                             }}
-                          ></Avatar>
+                          ></EnlargeAvatar>
                           <Typography
                             align="center"
                             sx={{
@@ -104,7 +121,7 @@ export default function BondingCard(props) {
                   >
                     <Grid container justifyContent="center" alignItems="center">
                       <Grid item>
-                        <Avatar
+                        <EnlargeAvatar
                           alt={input.name}
                           src={require(`${input.pic}`)}
                           sx={{
@@ -112,9 +129,12 @@ export default function BondingCard(props) {
                             height: 100,
                           }}
                           onClick={() => {
-                            window.open(require(`${input.vx}`), "_self");
+                            navigate(
+                              "/Members/" +
+                                input.name.toLowerCase().replace(/\s+/g, "")
+                            );
                           }}
-                        ></Avatar>
+                        ></EnlargeAvatar>
                         <Typography
                           align="center"
                           sx={{
