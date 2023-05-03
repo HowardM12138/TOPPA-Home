@@ -77,6 +77,7 @@ router.post("/image", upload.single("file"), (req, res) => {
 			name: req.body.name,
 		};
 		const imgObject = new imgModel(imageUploadObject);
+		console.log(req.body.name);
 		imgObject.save().catch((err) => {
 			console.log(err);
 			res.status(400).send("File upload failed");
