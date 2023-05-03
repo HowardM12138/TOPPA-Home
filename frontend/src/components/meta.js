@@ -1,2 +1,2 @@
-const backendLink = "http://localhost:4000";
+const backendLink = "https://toppa-home-backend.herokuapp.com/";
 export { backendLink };

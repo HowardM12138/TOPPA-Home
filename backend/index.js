@@ -10,7 +10,6 @@ const Reimbursement = require("./routes/reimbursement_route");
 const Info = require("./routes/MemberInfoRoutes");
 
 const app = express();
-const port = 4000;
 
 app.use(cors());
 app.use(express.json());
