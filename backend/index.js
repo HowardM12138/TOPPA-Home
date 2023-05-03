@@ -36,6 +36,6 @@ app.get("/", (req, res) => {
 	res.send("toppa home backend online");
 });
 
-app.listen(port, () => {
-	console.log("Server started at PORT:" + port);
+app.listen(process.env.PORT, () => {
+	console.log("Server started at PORT:" + process.env.PORT);
 });
