@@ -5,34 +5,37 @@ const cors = require("cors");
 const mongooes = require("mongoose");
 const AttendanceRoutes = require("./routes/AttendanceRoutes");
 const KudoBoardRoutes = require("./routes/KudoBoardRoutes");
-const SignInRoutes = require("./routes/SignInRoutes");
 const CalendarRoutes = require("./routes/CalendarRoutes");
-const PortalHomeRoutes = require("./routes/PortalHomeRoutes");
-
-require("dotenv").config();
+const Reimbursement = require("./routes/reimbursement_route");
+const Info = require("./routes/MemberInfoRoutes");
 
 const app = express();
-const port = 5002;
+const port = 4000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //自动parse的middleware
 
-const uri =
-  "mongodb+srv://admin:toppahome123@toppa-home.yreawp5.mongodb.net/?retryWrites=true&w=majority";
-mongooes.connect(uri);
-const connection = mongooes.connection;
-connection.once("open", () => {
-  console.log("connected!");
-});
+require("dotenv").config();
+const uri = process.env.DATABASE_URL;
+mongooes
+	.connect(uri)
+	.then((result) => {
+		console.log(`MongoDB connected successfully`);
+	})
+	.catch((err) => console.log(err));
 
 app.use(AttendanceRoutes);
 app.use(KudoBoardRoutes);
-app.use(SignInRoutes);
 app.use(CalendarRoutes);
-app.use(PortalHomeRoutes);
+app.use(Reimbursement);
+app.use(Info);
 
-app.listen(port);
+app.get("/", (req, res) => {
+	res.send("toppa home backend online");
+});
 
-module.exports = connection;
+app.listen(port, () => {
+	console.log("Server started at PORT:" + port);
+});

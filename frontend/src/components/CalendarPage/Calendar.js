@@ -7,34 +7,23 @@ import { getUser } from "../UserSession";
 //google calendar的public url可以在calendar的setting中找到
 
 export default function Calendar() {
-  const [Url, setUrl] = useState(null);
-  useEffect(() => {
-    fetch("http://localhost:5002/Calendar/getUrl", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify({
-        name: getUser().name,
-      }),
-    })
-      .then((result) => result.text())
-      .then((result) => setUrl(result))
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+	const [Url, setUrl] = useState(null);
+	useEffect(() => {
+		setUrl(
+			"https://calendar.google.com/calendar/embed?src=yangjingfeng0705%40berkeley.edu&ctz=America%2FLos_Angeles"
+		);
+	}, []);
 
-  return (
-    <div>
-      <NavBar />
-      {Url && (
-        <ReactEmbeddedGoogleCalendar
-          publicUrl={Url}
-          height="740px"
-          width="100%"
-        />
-      )}
-    </div>
-  );
+	return (
+		<div>
+			<NavBar />
+			{Url && (
+				<ReactEmbeddedGoogleCalendar
+					publicUrl={Url}
+					height='740px'
+					width='100%'
+				/>
+			)}
+		</div>
+	);
 }
