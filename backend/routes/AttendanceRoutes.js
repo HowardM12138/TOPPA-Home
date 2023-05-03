@@ -5,6 +5,7 @@ const AttendanceTitle = require("../models/AttendanceTitleModel");
 const MemberInfo = require("../models/MemberInfoModel");
 
 router.post("/Attendance/AddSecretWord", (req, res) => {
+	console.log(req.body);
 	const secret = req.body.secretword;
 	const member = req.body.name;
 	const week = req.body.week;

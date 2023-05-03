@@ -9,13 +9,13 @@ import ShareIcon from "@mui/icons-material/Share";
 import { Grid, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import howard_pic from "../photos/howardmeng.png";
-import wilson_pic from "../photos/wilsonhe.png";
-import jenny_pic from "../photos/jennywang.png";
-import jingfeng_pic from "../photos/jingfengyang.png";
-import coco_pic from "../photos/cocoma.png";
-import persy_pic from "../photos/persyzhu.png";
-import hidy_pic from "../photos/hidychan.png";
+// import howard_pic from "../photos/howardmeng.png";
+// import wilson_pic from "../photos/wilsonhe.png";
+// import jenny_pic from "../photos/jennywang.png";
+// import jingfeng_pic from "../photos/jingfengyang.png";
+// import coco_pic from "../photos/cocoma.png";
+// import persy_pic from "../photos/persyzhu.png";
+// import hidy_pic from "../photos/hidychan.png";
 
 import { backendLink } from "../meta";
 
@@ -31,16 +31,16 @@ const Wrapper = {
 
 export default function KudoBoard(props) {
 	const navigate = useNavigate();
-	const name_pic = {
-		//在cardmedia中的src中用relative path会报错找不到，只能先把图片导进来
-		Howard: howard_pic,
-		Wilson: wilson_pic,
-		Jenny: jenny_pic,
-		Jingfeng: jingfeng_pic,
-		Coco: coco_pic,
-		Persy: persy_pic,
-		Hidy: hidy_pic,
-	};
+	// const name_pic = {
+	// 	//在cardmedia中的src中用relative path会报错找不到，只能先把图片导进来
+	// 	Howard: howard_pic,
+	// 	Wilson: wilson_pic,
+	// 	Jenny: jenny_pic,
+	// 	Jingfeng: jingfeng_pic,
+	// 	Coco: coco_pic,
+	// 	Persy: persy_pic,
+	// 	Hidy: hidy_pic,
+	// };
 
 	const DeleteClick = () => {
 		console.log(props.id);
@@ -84,7 +84,11 @@ export default function KudoBoard(props) {
 	return (
 		<div>
 			<Card sx={CardStyle}>
-				<CardMedia component='img' height='400' image={name_pic[props.name]} />
+				<CardMedia
+					component='img'
+					height='400'
+					image={`data:image/png;base64,${props.image}`}
+				/>
 				<CardContent>
 					<Typography
 						variant='body2'

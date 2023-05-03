@@ -15,6 +15,7 @@ const GridContainerStyle = {
 export default function KudoBoard() {
 	const navigate = useNavigate();
 	const [Params, setParams] = useState([]);
+	const [images, setImages] = useState({});
 
 	const refresh = () => {
 		fetch(backendLink + "/KudoBoard/refresh")
@@ -23,13 +24,31 @@ export default function KudoBoard() {
 				//如果在arrow function后加了大括号的话，就得写上return statement了
 				//一定要把response.json()，不然出的就是一个另一个object了
 			)
-			.then((response) => {
-				setParams(response);
+			.then((kudos) => {
+				setParams(kudos);
 			})
 			.catch((err) => {
 				console.log(err);
 			});
 	};
+
+	const imageFetch = async () => {
+		if (Object.keys(images).length !== 0) return;
+		const imgs = {};
+		for (const kudo of Params) {
+			await fetch(backendLink + "/image/" + kudo.name)
+				.then((res) => res.text())
+				.then((binaryData) => {
+					imgs[kudo.name] = binaryData;
+				})
+				.catch((err) => console.log(err));
+		}
+		setImages(imgs);
+	};
+
+	useEffect(() => {
+		imageFetch();
+	}, [Params]);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -65,6 +84,7 @@ export default function KudoBoard() {
 									content={param.kudocontent}
 									id={param._id}
 									thumbup={param.thumbup}
+									image={images[param.name]}
 								/>
 							</Grid>
 						);
